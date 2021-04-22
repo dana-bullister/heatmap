@@ -3,206 +3,42 @@
 
 <head>
   <link rel="stylesheet" href="style.css">
-  <title>#StopAsianHate Around The Globe</title>
-
-  <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+  <title>City Voice</title>
 </head>
 
 <body>
 
   <div id='title'>
-    <h1>#StopAsianHate Around The Globe</h1>
+    <h1>City Voice</h1>
   </div>
 
   <div id='descr1' class='text'>
     <p>
 
-      On March 16, 2021 a series of racially motivated murders happened
-      at three spas in Atlanta, Georgia during which eight people, including
-      six Asian women, were killed. This horrific event, occurring on the
-      backdrop of rising anti-Asian sentiment in the United States during the
-      COVID-19 pandemic, fueled a global backlash against such racism,
-      encapsulated by the hashtag <b>#StopAsianHate</b>.
+      City Voice displays the prevalence of citizen engagement throughout the
+      city of Cambridge, MA. It uses publicly available information on written
+      comments from individuals around the area to the city government in order
+      to see where the most active and engaged residents tend to reside - and
+      how this changes over the years.
 
       <br><br>
 
-      This data visualization uses data scraped from Twitter using the Twitter
-      API and the tweepy Python library. Data was collected for all
-      geo-locatable tweets with the hashtag "#StopAsianHate" that were posted
-      over the course of the 24-hour period from March 18, 2021 at 4:00pm EST to
-      the same time on March 19, 2021.
-
-      <br><br>
-
-      Because only a small fraction of tweets posted to Twitter have geo data
-      associated with them (less than 1%), these 1,229 data points comprise only a
-      small fraction of all #StopAsianHate tweets. The map below displays these.
-
-      <br><br>
-
-      We can see that, two days after the events of March 16, people around the
-      globe (though concentrated in the US) continue to express their solidarity
-      with the cause of #StopAsianHate.
+      We can see that _
 
     </p>
   </div>
 
-  <div id='map' class='map-large'></div>
-
-  <div id="descr2" class='text'>
-    <p>
-      The second map below expands on the first to additionally present the text
-      content of tweets. Zoom in to view content for individual tweets around
-      the world.
-    </p>
-  </div>
-
-  <div id='map2' class='map-large'></div>
-
-  <div class='text'>
-    <p>
-      Next is a series of maps that show the progression of when these tweets
-      were posted over the course of the 24-hour period.
-
-      <br><br>
-
-      You can notice (and interactively explore) how different regions of the
-      world tweeted in different patterns and frequencies at different times
-      according to location and local time zone, especially in the Asia-Pacific
-      regions.
-    </p>
-  </div>
-
-  <div class='text series-header'>
-    <p>4pm-10pm EST</p>
-  </div>
-  <div id='map5' class='map-small'></div>
-  <div class='text series-header'>
-    <p>10pm-4am EST</p>
-  </div>
-  <div id='map6' class='map-small'></div>
-  <div class='text series-header'>
-    <p>4am-10am EST</p>
-  </div>
-  <div id='map3' class='map-small'></div>
-  <div class='text series-header'>
-    <p>10am-4pm EST</p>
-  </div>
-  <div id='map4' class='map-small'></div>
-
-  <div class='text'>
-    <p>
-      Finally, the below histogram shows the number of tweets over the course
-      of the day, normalized to correspond to local time and with categories
-      ordered to start at midnight. We can see that, true to intuition, most tweets are posted during waking
-      hours between 9am and 10pm, with a slump in the early morning hours of between
-      2am and 5am.
-    </p>
-  </div>
-
-  <div id='tweets-histogram-div'><img id='tweets-histogram' src="tweets_histogram.svg" alt="tweets_histogram.svg"></div>
-
-  <div class='text'>
-    <p>
-
-      Visualizing tweet data by geolocation can illuminate both patterns of
-      sentiment surrounding influential events and insight into the daily
-      rhythms of human awareness and activity. When activists rise, they do so
-      in waves - waves influenced by, yet ultimately transcendent of, geographic boundaries.
-
-    </p>
+  <div id='map' class='map-large'>
+    <img src="heatmap.gif" alt="heatmap.gif">
   </div>
 
   <div id='attribution'>
     <p>
-      Designed and developed by Dana Bullister and Dana Yao with help from
-      Mapbox.com for ARTG6100 Information Design Studio 2: Dynamic Mapping and
-      Models, Spring 2021, IDDV Program, Northeastern University
+      Designed and developed by Dana Bullister for ARTG6100 Information Design
+      Studio 2: Dynamic Mapping and Models, Spring 2021, IDDV Program,
+      Northeastern University
     </p>
   </div>
-
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZGJ1bGxpc3QiLCJhIjoiY2tsbzl2Z3g1MHIwejJ3cG1nbjFwOTVmdiJ9.Btd4mvqyAz7dL6WWQg0kjg';
-
-    var map = new mapboxgl.Map({
-      container: 'map', // container id
-      style: 'mapbox://styles/dbullist/ckmtzspfh4iul17nkn3scph2u'
-    });
-
-    map.on('load', function() {
-      map.on('mousemove', function(e) {
-        var tweets = map.queryRenderedFeatures(e.point, {
-          layers: ['stop-asian-hate-tweets']
-        });
-      });
-    });
-
-    var map2 = new mapboxgl.Map({
-      container: 'map2', // container id
-      style: 'mapbox://styles/dbullist/ckmtsqn2v2d8417mynb16irxn'
-    });
-
-    map2.on('load', function() {
-      map2.on('mousemove', function(e) {
-        var tweets = map2.queryRenderedFeatures(e.point, {
-          layers: ['stop-asian-hate-tweets']
-        });
-      });
-    });
-
-    var map3 = new mapboxgl.Map({
-      container: 'map3', // container id
-      style: 'mapbox://styles/dbullist/ckmu03jvf1h2d17lt2mrggwf1'
-    });
-
-    map3.on('load', function() {
-      map3.on('mousemove', function(e) {
-        var tweets = map3.queryRenderedFeatures(e.point, {
-          layers: ['stop-asian-hate-tweets-5']
-        });
-      });
-    });
-
-    var map4 = new mapboxgl.Map({
-      container: 'map4', // container id
-      style: 'mapbox://styles/dbullist/ckmp6dcc90rzx17o1j9n8foav'
-    });
-
-    map4.on('load', function() {
-      map4.on('mousemove', function(e) {
-        var tweets = map4.queryRenderedFeatures(e.point, {
-          layers: ['stop-asian-hate-tweets-5']
-        });
-      });
-    });
-
-    var map5 = new mapboxgl.Map({
-      container: 'map5', // container id
-      style: 'mapbox://styles/dbullist/ckmtzzme908qs18o4mlmaiabm'
-    });
-
-    map5.on('load', function() {
-      map5.on('mousemove', function(e) {
-        var tweets = map5.queryRenderedFeatures(e.point, {
-          layers: ['stop-asian-hate-tweets-5']
-        });
-      });
-    });
-
-    var map6 = new mapboxgl.Map({
-      container: 'map6', // container id
-      style: 'mapbox://styles/dbullist/ckmu01km34iz917pim3oazga0'
-    });
-
-    map6.on('load', function() {
-      map6.on('mousemove', function(e) {
-        var tweets = map6.queryRenderedFeatures(e.point, {
-          layers: ['stop-asian-hate-tweets-5']
-        });
-      });
-    });
-  </script>
 
 </body>
 
