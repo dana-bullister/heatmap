@@ -66,6 +66,12 @@ p {
   line-height: 1.8em;
 }
 
+.map-large {
+  margin: auto;
+  width: 80em;
+  height: 40em;
+}
+
 #attribution {
   text-align: left;
   line-height: 1.8em;

@@ -4,6 +4,9 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <title>City Voice</title>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -55,12 +58,31 @@
     </p>
   </div>
 
+  <div id='map' class='map-large'></div>
+
   <div id='attribution'>
     <p>
       Designed and developed by Dana Bullister, Spring 2021, IDDV Program,
       Northeastern University
     </p>
   </div>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZGJ1bGxpc3QiLCJhIjoiY2tsbzl2Z3g1MHIwejJ3cG1nbjFwOTVmdiJ9.Btd4mvqyAz7dL6WWQg0kjg';
+
+    var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/dbullist/cko0cyn700mwg17no9e7r01g6'
+    });
+
+    map.on('load', function() {
+      map.on('mousemove', function(e) {
+        var tweets = map.queryRenderedFeatures(e.point, {
+          layers: ['hiro_2017']
+        });
+      });
+    });
+  </script>
 
 </body>
 
