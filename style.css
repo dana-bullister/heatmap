@@ -70,6 +70,7 @@ p {
   margin: auto;
   width: 80em;
   height: 40em;
+  display: none;
 }
 
 .map-small {
