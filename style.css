@@ -87,7 +87,7 @@ margin-right: auto;
 }
 
 table, th, td  {
-border: 1px solid black;
+border: none;
 font-weight: normal;
 font-size: .98em;
 border-collapse: collapse;
@@ -101,16 +101,23 @@ text-align: center;
 
 .map-small {
   margin: auto;
-  margin-top: .5em;
   width: 50em;
   height: 35em;
 }
 
 .series-header {
+  margin: 0;
   padding: 0;
-  padding-left: 5em;
-  font-size: .8em;
-  text-align: center;
+
+}
+
+.series-header > * {
+  margin: 0;
+  margin-top: 1em;
+  padding: 0;
+  padding-bottom: -.2em;
+  text-align: left;
+    font-size: 2em;
 }
 
 #attribution {
