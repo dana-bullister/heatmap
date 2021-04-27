@@ -58,8 +58,8 @@
     </p>
   </div>
 
-  <div id='map' class='map-large'></div>
   <!-- map showing points of all years -->
+  <div id='map_all_years' class='map-large'></div>
 
   <!-- 2017 map -->
   <div class='text series-header'>
@@ -101,14 +101,14 @@
   <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoiZGJ1bGxpc3QiLCJhIjoiY2tsbzl2Z3g1MHIwejJ3cG1nbjFwOTVmdiJ9.Btd4mvqyAz7dL6WWQg0kjg';
 
-    var map = new mapboxgl.Map({
-      container: 'map', // container id
+    var map_all_years = new mapboxgl.Map({
+      container: 'map_all_years', // container id
       style: 'mapbox://styles/dbullist/cknryrhui15tw17n8351dsntn'
     });
 
-    map.on('load', function() {
-      map.on('mousemove', function(e) {
-        var tweets = map.queryRenderedFeatures(e.point, {
+    map_all_years.on('load', function() {
+      map_all_years.on('mousemove', function(e) {
+        var tweets = map_all_years.queryRenderedFeatures(e.point, {
           layers: ['hiro_2017']
         });
       });
