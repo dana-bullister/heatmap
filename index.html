@@ -63,23 +63,23 @@
   <div class='text series-header'>
     <p>2017</p>
   </div>
-  <div id='map3' class='map-small'></div>
+  <div id='map_2017' class='map-small'></div>
   <div class='text series-header'>
     <p>2018</p>
   </div>
-  <div id='map4' class='map-small'></div>
+  <div id='map_2018' class='map-small'></div>
   <div class='text series-header'>
     <p>2019</p>
   </div>
-  <div id='map5' class='map-small'></div>
+  <div id='map_2019' class='map-small'></div>
   <div class='text series-header'>
     <p>2020</p>
   </div>
-  <div id='map6' class='map-small'></div>
+  <div id='map_2020' class='map-small'></div>
   <div class='text series-header'>
     <p>2021</p>
   </div>
-  <div id='map7' class='map-small'></div>
+  <div id='map_2021' class='map-small'></div>
 
   <div id='attribution'>
     <p>
@@ -104,66 +104,66 @@
       });
     });
 
-    var map3 = new mapboxgl.Map({
-      container: 'map3',
+    var map_2017 = new mapboxgl.Map({
+      container: 'map_2017',
       style: 'mapbox://styles/dbullist/cko0cyn700mwg17no9e7r01g6'
     });
 
-    map3.on('load', function() {
-      map3.on('mousemove', function(e) {
-        var tweets = map3.queryRenderedFeatures(e.point, {
+    map_2017.on('load', function() {
+      map_2017.on('mousemove', function(e) {
+        var tweets = map_2017.queryRenderedFeatures(e.point, {
           layers: ['hiro_2017']
         });
       });
     });
 
-    var map4 = new mapboxgl.Map({
-      container: 'map4',
+    var map_2018 = new mapboxgl.Map({
+      container: 'map_2018',
       style: 'mapbox://styles/dbullist/cko0dijk40q4o17n1pz193q7o'
     });
 
-    map4.on('load', function() {
-      map4.on('mousemove', function(e) {
-        var tweets = map4.queryRenderedFeatures(e.point, {
+    map_2018.on('load', function() {
+      map_2018.on('mousemove', function(e) {
+        var tweets = map_2018.queryRenderedFeatures(e.point, {
           layers: ['hiro_2017']
         });
       });
     });
 
-    var map5 = new mapboxgl.Map({
-      container: 'map5',
+    var map_2019 = new mapboxgl.Map({
+      container: 'map_2019',
       style: 'mapbox://styles/dbullist/cko0ewmdw5hnj17peedvgcamv'
     });
 
-    map5.on('load', function() {
-      map5.on('mousemove', function(e) {
-        var tweets = map5.queryRenderedFeatures(e.point, {
+    map_2019.on('load', function() {
+      map_2019.on('mousemove', function(e) {
+        var tweets = map_2019.queryRenderedFeatures(e.point, {
           layers: ['hiro_2017']
         });
       });
     });
 
-    var map6 = new mapboxgl.Map({
-      container: 'map6',
+    var map_2020 = new mapboxgl.Map({
+      container: 'map_2020',
       style: 'mapbox://styles/dbullist/cko0eyxah47mm17qedprva6tm'
     });
 
-    map6.on('load', function() {
-      map6.on('mousemove', function(e) {
-        var tweets = map6.queryRenderedFeatures(e.point, {
+    map_2020.on('load', function() {
+      map_2020.on('mousemove', function(e) {
+        var tweets = map_2020.queryRenderedFeatures(e.point, {
           layers: ['hiro_2017']
         });
       });
     });
 
-    var map7 = new mapboxgl.Map({
-      container: 'map7',
+    var map_2021 = new mapboxgl.Map({
+      container: 'map_2021',
       style: 'mapbox://styles/dbullist/cko0f3dll40v917s0i578qqjr'
     });
 
-    map7.on('load', function() {
-      map7.on('mousemove', function(e) {
-        var tweets = map7.queryRenderedFeatures(e.point, {
+    map_2021.on('load', function() {
+      map_2021.on('mousemove', function(e) {
+        var tweets = map_2021.queryRenderedFeatures(e.point, {
           layers: ['hiro_2017']
         });
       });
