@@ -73,6 +73,64 @@ p {
   display: none;
 }
 
+.table-container {
+padding: 0em;
+display: block;
+margin-top: 1.1em;
+}
+
+table {
+margin: 0em 0em 0em 0em;
+table-layout: fixed;
+margin-left: auto;
+margin-right: auto;
+}
+
+table, th, td  {
+border: 1px solid black;
+font-weight: normal;
+font-size: .98em;
+border-collapse: collapse;
+}
+
+th {
+height: 2.9em;
+padding: 0.6em;
+}
+
+.pricing-category-container {
+padding: 0em;
+display: block;
+text-align: center;
+max-width: 10.5em;
+min-width: 7em;
+display: block;
+}
+
+.pricing-category {
+text-align: center;
+display: block;
+}
+
+.product-feature {
+text-align: left;
+max-width: 13.5em;
+min-width: 7em;
+display: block;
+padding: 0.1em 0;
+}
+
+td {
+height: 3.5em;
+padding: 0em 0.4em;
+text-align: center;
+}
+
+.checkmark {
+width: 2em;
+height: 2em;
+}
+
 .map-small {
   margin: auto;
   margin-top: .5em;
