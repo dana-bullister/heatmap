@@ -131,12 +131,16 @@ td {
   color: rgba(0,0,0,0);
 }
 
+#descr3 {
+  margin-top: 2em;
+}
+
 #attribution {
   text-align: left;
   line-height: 1.8em;
   font-size: .8em;
   text-align: center;
-  margin-top: 5em;
+  margin-top: 10em;
 }
 
 #attribution > * {
