@@ -101,10 +101,25 @@ padding: 0em 0.4em;
 text-align: center;
 }
 
+.word-cloud-wrapper {
+  background-color: white;
+}
+
+.word-cloud-wrapper > * {
+  width: 600px;
+}
+
+.word-cloud-wrapper {
+  margin: auto;
+  width: 600px;
+  height: 420px;
+  text-align: center;
+}
+
 .map-small {
   margin: auto;
-  width: 50em;
-  height: 35em;
+  width: 600px;
+  height: 420px;
 }
 
 .series-header {
@@ -119,6 +134,10 @@ text-align: center;
   padding-bottom: -.2em;
   text-align: left;
   font-size: 2em;
+}
+
+.word-cloud > * {
+  color: rgba(0,0,0,0);
 }
 
 #attribution {
