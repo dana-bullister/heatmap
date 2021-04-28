@@ -10,7 +10,7 @@ h1, p {
   letter-spacing: .1em;
 }
 
-#title {
+#title-wrapper {
   width: 100%;
   text-align: center;
 }
@@ -27,13 +27,13 @@ p {
   font-size: 1.3em;
 }
 
-.text {
+.descr {
   width: 100%;
   text-align: center;
   padding: 2em 1.8em .75em 1.8em;
 }
 
-.text * {
+.descr > p {
   margin: auto;
   text-align: left;
   max-width: 36em;
@@ -49,19 +49,19 @@ p {
   margin-bottom: 1em;
 }
 
-#heatmap-div-div {
+#heatmap-gif-section {
   width: 100%;
   background-color: purple;
   height: 31em;
 }
 
-#heatmap-div {
+#heatmap-gif-div {
   width: 100%;
   text-align: center;
   padding: 2em 2em 2em .75em;
 }
 
-#heatmap {
+#heatmap-gif {
   margin: auto;
   text-align: left;
   max-width: 36em;
@@ -101,33 +101,23 @@ td {
   text-align: center;
 }
 
-.word-cloud-wrapper {
-  background-color: white;
-}
-
-.word-cloud-wrapper > * {
-  width: 600px;
-}
-
-.word-cloud-wrapper {
-  margin: auto;
-  width: 600px;
-  height: 420px;
-  text-align: center;
-}
-
-.map-small {
+.word-cloud-div, .word-cloud, .map-small-div {
   margin: auto;
   width: 600px;
   height: 420px;
 }
 
-.series-header {
+
+.word-cloud-div {
+    background-color: white;
+}
+
+.year-label-div {
   margin: 0;
   padding: 0;
 }
 
-.series-header > * {
+.year-label-div > p {
   margin: 0;
   margin-top: 1em;
   padding: 0;
@@ -136,7 +126,7 @@ td {
   font-size: 2em;
 }
 
-.word-cloud > * {
+.year-label-div-word-cloud > p {
   color: rgba(0,0,0,0);
 }
 
