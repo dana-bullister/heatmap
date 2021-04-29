@@ -112,6 +112,11 @@ td {
   background-color: rgb(213,240,247);
 }
 
+.word-cloud {
+  height: 480px;
+  margin-top: 2em;
+}
+
 .year-label-div {
   margin: 0;
   padding: 0;
