@@ -104,8 +104,8 @@ td {
 
 .word-cloud-div, .word-cloud, .map-small-div {
   margin: auto;
-  width: 700px;
-  height: 520px;
+  width: 680px;
+  height: 470px;
 }
 
 
@@ -114,7 +114,7 @@ td {
 }
 
 .word-cloud {
-  height: 480px;
+  height: 450px;
   margin-top: 2em;
 }
 
