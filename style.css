@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 2em;
   background-color: rgb(153,217,234);
 }
 
@@ -102,39 +102,42 @@ td {
   text-align: center;
 }
 
-.word-cloud-div, .word-cloud, .map-small-div {
-  margin: auto;
-  width: 680px;
-  height: 470px;
+.map-cloud-div {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
+.map-small-div, .map-small-div > *, .word-cloud-div, .word-cloud {
+  display: inline-block;
+  width: 580px;
+  height: 370px;
+  margin: 0;
+  padding: 0;
+}
+
+.map-small-div {
+  margin-right: .25em;
+}
 
 .word-cloud-div {
   background-color: rgb(213,240,247);
-}
-
-.word-cloud {
-  height: 450px;
-  margin-top: 2em;
+  margin-left: .25em;
 }
 
 .year-label-div {
+  width: 100%;
+  text-align: center;
   margin: 0;
   padding: 0;
 }
 
 .year-label-div > p {
-  margin: 0;
-  margin-top: 1em;
+  margin: 1em 0 .4em 0;
   padding: 0;
-  padding-bottom: .1em;
-  text-align: left;
   font-size: 3em;
   font-weight: bold;
-}
-
-.word-cloud-year-label-div > p {
-  color: rgba(0,0,0,0);
 }
 
 #descr3 {
