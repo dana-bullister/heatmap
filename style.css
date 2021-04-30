@@ -146,7 +146,8 @@ td {
   line-height: 1.8em;
   font-size: .8em;
   text-align: center;
-  margin-top: 10em;
+  margin-top: 15em;
+  margin-bottom: 3em;
 }
 
 #attribution > * {
