@@ -91,13 +91,8 @@ p {
   padding: 0;
 }
 
-.map-small-div {
-  margin-right: .25em;
-}
-
 .word-cloud-div {
   background-color: rgb(213,240,247);
-  margin-left: .25em;
 }
 
 .year-label-div {
