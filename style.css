@@ -83,7 +83,7 @@ p {
   text-align: center;
 }
 
-.map-small-div, .map-small-div > *, .word-cloud-div, .word-cloud {
+.map-small-div, .word-cloud-div, .word-cloud {
   display: inline-block;
   width: 650px;
   height: 470px;
